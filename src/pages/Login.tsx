@@ -200,4 +200,15 @@ export default function Login({ onLoginSuccess }: LoginProps) {
             <button
               type="button"
               onClick={() => setIsRegister(!isRegister)}
-              className="text-xs text-indigo-600 hover:text-indigo-500 font-semibold
+              className="text-xs text-indigo-600 hover:text-indigo-500 font-semibold"
+            >
+              {isRegister
+                ? 'Already have an account? Partner Sign-In'
+                : "Don't have an account? Register BDA Access"}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
