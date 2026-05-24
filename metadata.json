@@ -1,0 +1,8 @@
+{
+  "name": "Manufacturing BDA CRM",
+  "description": "A comprehensive, full-stack CRM tailored for Manufacturing Business Development Associate teams with pipeline management, lead scoring, quote builders, client details, and activity analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
