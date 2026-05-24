@@ -48,7 +48,8 @@ export default function Login({ onLoginSuccess }: LoginProps) {
           throw new Error('Please input both email and password.');
         }
         const response = await API.auth.login(email, password);
-        onLoginSuccess(response.user);
+        // The server returns the user inside the 'data' property
+        onLoginSuccess(response.data?.user || response.user);
       }
     } catch (err: any) {
       console.error(err);
@@ -199,13 +200,4 @@ export default function Login({ onLoginSuccess }: LoginProps) {
             <button
               type="button"
               onClick={() => setIsRegister(!isRegister)}
-              className="text-xs text-indigo-600 hover:text-indigo-500 font-semibold"
-            >
-              {isRegister ? 'Already have an account? Log in' : 'Request new BDA Associate Access'}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+              className="text-xs text-indigo-600 hover:text-indigo-500 font-semibold
